@@ -1,0 +1,30 @@
+\makeatletter
+\renewcommand{\section}{\@startsection{section}{12}
+{0mm} % Einzug
+{1.2\baselineskip} % Vorabstand
+{0.4\baselineskip} % Nachabstand
+{\Large\sffamily\hrule\vspace{0.5\baselineskip}}
+}
+\makeatother
+
+\newcommand{\entrylabel}[1]{\mbox{#1}\hfil}
+
+\newenvironment{CV}
+  {\begin{list}{}
+    {\renewcommand{\makelabel}{\entrylabel}
+    \setlength{\labelwidth}{75pt}
+    \setlength{\leftmargin}{80pt}
+  }}
+  {\end{list}
+}
+
+\newenvironment{CVt}
+  {\begin{list}{}
+    {\renewcommand{\makelabel}{\entrylabel}
+    \setlength{\labelwidth}{75pt}
+    \setlength{\leftmargin}{80pt}
+    \setlength{\itemsep}{0pt}
+    \setlength{\parsep}{0pt}
+  }}
+  {\end{list}
+}

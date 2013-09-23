@@ -1,0 +1,320 @@
+\documentclass[DIV=12,fontsize=11]{scrartcl}
+\usepackage[bitstream-charter]{mathdesign} % provides Charter BT
+\usepackage{libertine} % provides Biolinum
+\usepackage[scaled]{beramono} % provides Bera Mono
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage{tabularx}
+\usepackage{CV}
+
+\usepackage[super]{nth}
+\usepackage{textcomp}
+
+%% Contents switches
+\def\tpic{}
+%\def\tprog{}
+%\def\tsport{}
+
+
+\ifdefined\tpic
+    \usepackage{graphicx}
+\fi
+
+\usepackage[pdftex,bookmarks=false]{hyperref}
+\hypersetup{pdfauthor={Boris Vassilev}}
+\hypersetup{pdftitle={Curriculum Vitae Boris Vassilev}}
+
+%\addtolength{\textwidth}{80pt}
+%\addtolength{\hoffset}{-40pt}
+\addtolength{\textheight}{80pt}
+\addtolength{\voffset}{-30pt}
+
+% Language skills
+% ---------------
+\newcommand{\natlang}{
+\section{Language Skills}
+\begin{CVt}
+%\item[Finnish] good
+\item[English] fluent
+\item[German] fluent
+\item[Russian] good (spoken)
+\item[Bulgarian] mother tongue
+\end{CVt}
+}
+
+% Computer languages
+% ------------------
+\newcommand{\complang}{
+\section{Programming}
+\begin{CVt}
+
+\item[C, C++] proficient (more than three years of professional experience)
+
+\item[R, Python] proficient (more than three years of experience in academic environment)
+
+\item[Prolog, Erlang] learning (one year experience)
+
+\end{CVt}
+}
+
+% Sport
+% -----
+\newcommand{\sport}{
+\section{Sport}
+\begin{CV}
+
+\item[since 2009]
+Yearly participant in the Helsinki City Run (half-marathon)
+
+\item[10.2005--9.2008]
+Participant in several sprint and olympic distance triathlon completitions
+
+\item[10.2006--9.2008]
+Member of Triathlon Verein Dresden e.V.
+
+\item[8.2005--9.2006]
+Member of the MTG (Mannheimer Turn- und Sport-Gesellschaft 1889 e.V.) Triathlon Team
+\end{CV}
+}
+
+% Personal information
+% --------------------
+\newcommand{\personalinformation}{
+\section{Personal Information}
+\begin{CVt}
+\item[Born] 13.08.1981
+\item[Place of birth] Plovdiv, Bulgaria
+\item[Nationality] Bulgarian
+\item[Family status] Married, wife Lotta Maria, child Maja Martta
+\end{CVt}
+}
+
+% Education
+% ---------
+\newcommand{\education}{
+\section{Education}
+\begin{CV}
+
+\item[10.2006--9.2008]
+Molecular Bioengineering (Master of Science M.Sc.), GPA 1.9
+
+TU Dresden, Dresden University of Technology
+
+\item[2.2002--9.2006]
+Computer Science (Diplom FH), GPA 1.9
+
+Hochschule Mannheim, University of Applied Sciences
+
+\if 0
+\item[10.1999--11.2001]
+BSc (Hons) Biotechnology, completed 4 of 7 semesters
+
+Hochschule Mannheim, University of Applied Sciences
+\fi
+
+\item[9.1994--5.1999]
+High School Diploma, GPA 1.5
+
+American College of Sofia, an English language high school
+
+\if 0
+Profiles of Study: English, Mathematics, Advanced Physics
+\fi
+
+%\if 0
+\begin{small}
+\item[Grading key]
+\mbox{1.0-1.5 very good;} \mbox{1.6-2.5 good;} \mbox{2.6-3.5 average;}
+\mbox{3.6-4.0 pass;} \mbox{4.1-5.0 fail}
+\end{small}
+%\fi
+
+\end{CV}
+}
+
+% Scientific activities
+% ---------------------
+\newcommand{\scientificactivities}{
+\section{Scientific Activities}
+\begin{CV}
+
+\item[Scientific talk]
+``The role of cholesterol-binding protein StARD3 in ErbB2-positive Breast Cancer'', Boris Vassilev
+
+The Fifth Finnish Cell Biology Symposium, April 19--20, 2012, Lammi, Finland
+
+\item[Poster]
+``MLN64 --- a Link between Cell Cholesterol Transport and Breast Cancer?'' \emph{Boris Vassilev}, Maurice Jansen and Elina Ikonen
+
+EMBO | EMBL Symposium: Structure and Dynamics of Protein Networks, October 13--16, 2011, Heidelberg, Germany
+
+\nth{52} International Conference on the Bioscience of Lipids, August 30--September 3, 2011, Warsaw, Poland
+
+The Second Vesicular Traffic and Cancer Workshop, June 7--9, 2010, Turku, Finland
+
+The Third Finnish Cell Biology Symposium, April 22--23, 2010, Lammi, Finland
+
+\item[Organizer]
+Seventh International HBGP Student Council Symposium: Immunity and Inflammation in Disease, June 7--8, 2012, Biomedicum Helsinki, Finland
+
+Sixth International HBGS Student Council Symposium: Cell Cycle and Proliferation, April 14--15, 2011, Biomedicum Helsinki, Finland
+
+\end{CV}
+}
+
+% Grants
+% ------
+\newcommand{\grants}{
+\section{Grants Received}
+\begin{CV}
+
+\item[5.2013]
+    Ida Montinin Säätiö cancer research grant, \texteuro{}3000
+
+\item[10.2011]
+    HBGP Travel Grant, \texteuro{}1000
+
+\item[9.2011]
+    Chancellors Travel Grant, \texteuro{}800
+
+\end{CV}
+}
+
+% Theses
+% ------
+\newcommand{\theses}{
+\section{Theses}
+\begin{CV}
+
+\item[3.2008--8.2008]
+Assessment of algorithms for the detection of activated pathways in regulatory networks (master thesis, supervisor Dr.~Andreas Beyer)
+
+Systems Biology and Cellular Networks group (Dr.~Andreas Beyer), BIOTEC, Dresden University of Technology
+
+\ifdefined\tprog
+    Programming languages: R, C++
+\fi
+
+\item[2.2006--9.2006]
+Design and implementation of a user interface based on a safety-related, redundant architecture (diploma thesis, supervisor Prof.~Dr.-Ing.~habil.~Josef Börcsök)
+
+Department for Research and Development, HIMA Paul Hildebrandt
+
+\ifdefined\tprog
+    Programming language: C++; Platform: embedded redundant microcontroller architecture (Atmel, ARM core)
+\fi
+
+\end{CV}
+}
+
+% Work experience
+% ---------------
+\newcommand{\workexperience}{
+\section{Work Experience}
+\begin{CV}
+
+\item[Since 1.2009]
+PhD student, Intracellular Cholesterol Trafficking lab (Prof.~Elina Ikonen), Biomedicum, University of Helsinki, Finland
+
+The role of MLN64, a late endosomal, cholesterol binding protein, in the progression of breast cancer
+
+\item[3.2007--10.2007]
+Internship, Bioinformatics Department (Prof.~Michael Schroeder), BIOTEC, Dresden University of Technology, Germany
+
+``Structural fragment clustering reveals novel structural and functional motifs in alpha-helical transmembrane proteins.'' A Marsico, A Henschel, C Winter, A Tuukkanen, \emph{B Vassilev}, K Scheubert and M Schroeder, {\sl BMC Bioinformatics} 2010, 11:204
+
+\ifdefined\tprog
+    Programming language: Python
+\fi
+
+\item[3.2003--1.2006]
+Internship and part-time software developer, Department for Research and Development, HIMA Paul Hildebrandt, Brühl (Baden), Germany
+
+\ifdefined\tprog
+A. Implementing the software for the H6210 HART-Multiplexer%
+    \\
+    Programming language: C; Platform: embedded microcontroller (MSP430)
+
+B. Development of a device type manager for the H6210 HART multiplexer according to the Field Device Tool specification%
+    \\
+    Programming language: C++; Platform: Windows, Microsoft Component Object Model with ActiveX Template Library
+\fi
+
+\end{CV}
+}
+\hyphenation{ Mic-ro-cont-rol-ler mic-ro-cont-rol-ler De-ve-lop-ment}
+
+% Other activities
+% ----------------
+\newcommand{\otheractivities}{
+\section{Other Activities}
+\begin{CV}
+
+\item[3.2011] Winner of the first ScienceSLAM event in Helsinki, Finland
+
+Performed a self-composed song inspired by my PhD project
+
+\item[since 6.2010] Member of the Helsinki Biomedical Graduate Program (HBGP) student council
+
+\end{CV}
+}
+
+\ifdefined\tpic
+    \usepackage[absolute]{textpos}
+    \setlength{\TPHorizModule}{1pt}
+    \setlength{\TPVertModule}{1pt}
+\fi
+
+
+\begin{document}
+\pagestyle{empty}
+
+\ifdefined\tpic
+    \begin{textblock}{100}(415,70)
+    \includegraphics[width=.95\columnwidth]{boris.jpg}
+    \end{textblock}
+\fi
+
+\ifdefined\tpic
+    \begin{flushleft}
+\else
+    \begin{center}
+\fi
+
+\begin{sffamily}
+\Huge{Curriculum Vitae}
+\vspace{.2\baselineskip}
+
+\LARGE{\textbf{Boris Vassilev}}
+\vspace{.2\baselineskip}
+
+\normalsize{
+Pihlajatie 39 As 1\\
+00270 Helsinki, Finland\\
+Phone: +358\,45\,237\,4737\\
+Email: boris.vassilev@helsinki.fi\\
+}
+\end{sffamily}
+
+\ifdefined\tpic
+    \end{flushleft}
+\else
+    \end{center}
+\fi
+
+
+\begin{flushleft}
+    \personalinformation{}
+    \education{}
+    \workexperience{}
+    \grants{}
+    \theses{}
+    \scientificactivities{}
+    \otheractivities{}
+    \natlang{}
+\end{flushleft}
+
+\end{document}
+
+
