@@ -1,19 +1,23 @@
 \documentclass[DIV=12,fontsize=11]{scrartcl}
-\usepackage[bitstream-charter]{mathdesign} % provides Charter BT
+%\usepackage[bitstream-charter]{mathdesign} % provides Charter BT
+\usepackage{tgpagella} % provides Charter BT
 \usepackage{libertine} % provides Biolinum
 \usepackage[scaled]{beramono} % provides Bera Mono
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 
+\usepackage[kerning,spacing]{microtype}
+\microtypecontext{spacing=nonfrench}
+
 \usepackage{tabularx}
 \usepackage{CV}
 
 \usepackage[super]{nth}
-\usepackage{textcomp}
+\usepackage{eurosym}
 
 %% Contents switches
-\def\tpic{}
-%\def\tprog{}
+%\def\tpic{}
+\def\tprog{}
 %\def\tsport{}
 
 
@@ -30,14 +34,15 @@
 \addtolength{\textheight}{80pt}
 \addtolength{\voffset}{-30pt}
 
+\hyphenation{ Mic-ro-cont-rol-ler mic-ro-cont-rol-ler De-ve-lop-ment}
 % Language skills
 % ---------------
 \newcommand{\natlang}{
 \section{Language Skills}
 \begin{CVt}
-%\item[Finnish] good
 \item[English] fluent
 \item[German] fluent
+\item[Finnish] learning
 \item[Russian] good (spoken)
 \item[Bulgarian] mother tongue
 \end{CVt}
@@ -51,9 +56,9 @@
 
 \item[C, C++] proficient (more than three years of professional experience)
 
-\item[R, Python] proficient (more than three years of experience in academic environment)
+\item[R, Python] proficient (more than two years of experience in academic environment)
 
-\item[Prolog, Erlang] learning (one year experience)
+\item[Prolog, Erlang] hobby use (more than a year)
 
 \end{CVt}
 }
@@ -86,7 +91,7 @@ Member of the MTG (Mannheimer Turn- und Sport-Gesellschaft 1889 e.V.) Triathlon 
 \item[Born] 13.08.1981
 \item[Place of birth] Plovdiv, Bulgaria
 \item[Nationality] Bulgarian
-\item[Family status] Married, wife Lotta Maria, child Maja Martta
+%\item[Family status] Married, wife Lotta Maria, child Maja Martta
 \end{CVt}
 }
 
@@ -170,13 +175,13 @@ Sixth International HBGS Student Council Symposium: Cell Cycle and Proliferation
 \begin{CV}
 
 \item[5.2013]
-    Ida Montinin Säätiö cancer research grant, \texteuro{}3000
+    Ida Montinin Säätiö cancer research grant, \euro{}3000
 
 \item[10.2011]
-    HBGP Travel Grant, \texteuro{}1000
+    HBGP Travel Grant, \euro{}1000
 
 \item[9.2011]
-    Chancellors Travel Grant, \texteuro{}800
+    Chancellors Travel Grant, \euro{}800
 
 \end{CV}
 }
@@ -193,7 +198,7 @@ Assessment of algorithms for the detection of activated pathways in regulatory n
 Systems Biology and Cellular Networks group (Dr.~Andreas Beyer), BIOTEC, Dresden University of Technology
 
 \ifdefined\tprog
-    Programming languages: R, C++
+Programming languages: R, C++ (as an R package)
 \fi
 
 \item[2.2006--9.2006]
@@ -225,7 +230,7 @@ Internship, Bioinformatics Department (Prof.~Michael Schroeder), BIOTEC, Dresden
 ``Structural fragment clustering reveals novel structural and functional motifs in alpha-helical transmembrane proteins.'' A Marsico, A Henschel, C Winter, A Tuukkanen, \emph{B Vassilev}, K Scheubert and M Schroeder, {\sl BMC Bioinformatics} 2010, 11:204
 
 \ifdefined\tprog
-    Programming language: Python
+Programming language: Python with BioMart and NumPy; MySQL database
 \fi
 
 \item[3.2003--1.2006]
@@ -238,12 +243,11 @@ A. Implementing the software for the H6210 HART-Multiplexer%
 
 B. Development of a device type manager for the H6210 HART multiplexer according to the Field Device Tool specification%
     \\
-    Programming language: C++; Platform: Windows, Microsoft Component Object Model with ActiveX Template Library
+    Programming language: C++; Platform: Windows, Microsoft Component Object Model (COM) with ActiveX Template Library
 \fi
 
 \end{CV}
 }
-\hyphenation{ Mic-ro-cont-rol-ler mic-ro-cont-rol-ler De-ve-lop-ment}
 
 % Other activities
 % ----------------
@@ -284,18 +288,18 @@ Performed a self-composed song inspired by my PhD project
 
 \begin{sffamily}
 \huge{Curriculum Vitae}
-\vspace{.3\baselineskip}
+\vspace{.5\baselineskip}
 
 \LARGE{\textbf{Boris Vassilev}}
-\vspace{.2\baselineskip}
+\vspace{.15\baselineskip}
+\end{sffamily}
 
 \normalsize{
 Pihlajatie 39 As 1\\
 00270 Helsinki, Finland\\
-Phone: +358\,45\,237\,4737\\
-Email: boris.vassilev@helsinki.fi\\
+phone: +358\,45\,237\,4737\\
+e-mail: boris.vassilev@helsinki.fi\\
 }
-\end{sffamily}
 
 \ifdefined\tpic
     \end{flushleft}
@@ -308,11 +312,12 @@ Email: boris.vassilev@helsinki.fi\\
     \personalinformation{}
     \education{}
     \workexperience{}
-    \grants{}
+    %\grants{}
     \theses{}
-    \scientificactivities{}
-    \otheractivities{}
     \natlang{}
+    \complang{}
+    \scientificactivities{}
+    %\otheractivities{}
 \end{flushleft}
 
 \end{document}
