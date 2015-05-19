@@ -1,12 +1,19 @@
-\documentclass[DIV=12,fontsize=11]{scrartcl}
-\usepackage[bitstream-charter]{mathdesign} % provides Charter BT
+\documentclass[DIV=12,fontsize=10]{scrartcl}
 \usepackage{cabin} % provides Cabin
 \usepackage[scaled]{beramono} % provides Bera Mono
+\usepackage[bitstream-charter]{mathdesign} % provides Charter BT
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 
 \usepackage[kerning,spacing]{microtype}
 \microtypecontext{spacing=nonfrench}
+
+\usepackage{fixltx2e}
+\usepackage[pdfusetitle]{hyperref}
+\hypersetup{allbordercolors=1 1 1}
+
+\title{Curriculum Vitae}
+\author{Boris Vassilev}
 
 \usepackage{tabularx}
 \usepackage{CV}
@@ -16,7 +23,7 @@
 
 %% Contents switches
 %\def\tpic{}
-\def\tprog{}
+%\def\tprog{}
 %\def\tsport{}
 
 
@@ -49,11 +56,13 @@
 \section{Programming Languages}
 \begin{CVt}
 
-\item[C, C++] proficient (more than three years of professional experience)
+\item[C, C++] proficient (3+ years professional experience, 10+ years personal use)
 
-\item[R, Python] proficient (more than two years of experience in academic environment)
+\item[R, Python, SQL] proficient (4+ years experience in academic environment)
 
-\item[Prolog, Erlang] hobby use (more than a year)
+\item[Prolog, Erlang] proficient (3+ years personal use)
+
+\item[Java] working knowledge
 
 \end{CVt}
 }
@@ -86,7 +95,7 @@ Member of the MTG (Mannheimer Turn- und Sport-Gesellschaft 1889 e.V.) Triathlon 
 \item[Born] 13.08.1981
 \item[Place of birth] Plovdiv, Bulgaria
 \item[Nationality] Bulgarian
-%\item[Family status] Married, wife Lotta Maria, child Maja Martta
+\item[Family status] Married with children
 \end{CVt}
 }
 
@@ -99,12 +108,12 @@ Member of the MTG (Mannheimer Turn- und Sport-Gesellschaft 1889 e.V.) Triathlon 
 \item[10.2006--9.2008]
 Molecular Bioengineering (Master of Science M.Sc.), GPA 1.9
 
-TU Dresden, Dresden University of Technology
+TU Dresden, Dresden University of Technology, Germany
 
 \item[2.2002--9.2006]
 Computer Science (Diplom FH), GPA 1.9
 
-Hochschule Mannheim, University of Applied Sciences
+Hochschule Mannheim, University of Applied Sciences, Germany
 
 \if 0
 \item[10.1999--11.2001]
@@ -116,7 +125,7 @@ Hochschule Mannheim, University of Applied Sciences
 \item[9.1994--5.1999]
 High School Diploma, GPA 1.5
 
-American College of Sofia, an English language high school
+American College of Sofia, an English language high school, Bulgaria
 
 \if 0
 Profiles of Study: English, Mathematics, Advanced Physics
@@ -138,6 +147,9 @@ Profiles of Study: English, Mathematics, Advanced Physics
 \newcommand{\scientificactivities}{
 \section{Scientific Activities}
 \begin{CV}
+
+\item[Mentoring]
+Mentor for ``Expert Systems in SWI-Prolog'' at the ``Facebook Open Academy'' organized at the University of California, San Diego, Spring 2015
 
 \item[Scientific talk]
 ``The role of cholesterol-binding protein StARD3 in ErbB2-positive Breast Cancer'', Boris Vassilev
@@ -166,17 +178,29 @@ Sixth International HBGS Student Council Symposium: Cell Cycle and Proliferation
 % Grants
 % ------
 \newcommand{\grants}{
-\section{Grants Received}
+\section{Research Grants}
 \begin{CV}
+
+\item[5.2015]
+  The Finnish Society of Sciences and Letters research grant, \euro{}6000
+
+\item[12.2014]
+  Biomedicum Helsinki Foundation research grant, \euro{}3000
+
+\item[2.2014]
+    Paulon Säätiö research grant, \euro{}4000
+
+\item[12.2013]
+    K. Albin Johanssons stiftelse research grant, \euro{}5000
 
 \item[5.2013]
     Ida Montinin Säätiö cancer research grant, \euro{}3000
 
-\item[10.2011]
-    HBGP Travel Grant, \euro{}1000
-
-\item[9.2011]
-    Chancellors Travel Grant, \euro{}800
+%\item[10.2011]
+%    HBGP Travel Grant, \euro{}1000
+%
+%\item[9.2011]
+%    Chancellors Travel Grant, \euro{}800
 
 \end{CV}
 }
@@ -217,19 +241,19 @@ Department for Research and Development, HIMA Paul Hildebrandt
 \item[Since 1.2009]
 PhD student, Intracellular Cholesterol Trafficking lab (Prof.~Elina Ikonen), Biomedicum, University of Helsinki, Finland
 
-The role of StARD3 (MLN64), a late endosomal, cholesterol binding protein, in the progression of breast cancer
+The role of endosomal trafficking defects in the progression of breast cancer
 
 \item[3.2007--10.2007]
 Internship, Bioinformatics Department (Prof.~Michael Schroeder), BIOTEC, Dresden University of Technology, Germany
 
-``Structural fragment clustering reveals novel structural and functional motifs in alpha-helical transmembrane proteins.'' A Marsico, A Henschel, C Winter, A Tuukkanen, \emph{B Vassilev}, K Scheubert and M Schroeder, {\sl BMC Bioinformatics} 2010, 11:204
+``Structural fragment clustering reveals novel structural and functional motifs in alpha-helical transmembrane proteins.'' A Marsico, A Henschel, C Winter, A Tuukkanen, \emph{B Vassilev}, K Scheubert and M Schroeder, \textsl{BMC Bioinformatics} 2010, 11:204
 
 \ifdefined\tprog
 Programming language: Python with BioMart and NumPy; MySQL database
 \fi
 
 \item[3.2003--1.2006]
-Internship and part-time software developer, Department for Research and Development, HIMA Paul Hildebrandt, Brühl (Baden), Germany
+Internship and software engineer / programmer, Department for Research and Development, HIMA Paul Hildebrandt, Brühl (Baden), Germany
 
 \ifdefined\tprog
 A. Implementing the software for the H6210 HART-Multiplexer%
@@ -254,7 +278,7 @@ B. Development of a device type manager for the H6210 HART multiplexer according
 
 Performed a self-composed song inspired by my PhD project
 
-\item[since 6.2010] Member of the Helsinki Biomedical Graduate Program (HBGP) student council
+\item[6.2010--12.2013] Member of the Helsinki Biomedical Graduate Program (HBGP) student council
 
 \end{CV}
 }
@@ -282,12 +306,11 @@ Performed a self-composed song inspired by my PhD project
 \fi
 
 \begin{sffamily}
-\huge{Curriculum Vitae}
+\LARGE{Curriculum Vitae}
 \vspace{.5\baselineskip}
 
-\LARGE{\textbf{Boris Vassilev}}
+\Large{\textbf{Boris Vassilev}}
 \vspace{.15\baselineskip}
-\end{sffamily}
 
 \normalsize{
 Pihlajatie 39 As 1\\
@@ -295,6 +318,7 @@ Pihlajatie 39 As 1\\
 phone: +358\,45\,237\,4737\\
 e-mail: boris.vassilev@helsinki.fi\\
 }
+\end{sffamily}
 
 \ifdefined\tpic
     \end{flushleft}
@@ -307,12 +331,12 @@ e-mail: boris.vassilev@helsinki.fi\\
     \personalinformation{}
     \education{}
     \workexperience{}
-    %\grants{}
     \theses{}
+    \grants{}
+    \scientificactivities{}
+    \otheractivities{}
     \natlang{}
     \complang{}
-    \scientificactivities{}
-    %\otheractivities{}
 \end{flushleft}
 
 \end{document}
