@@ -1,6 +1,7 @@
 \documentclass[DIV=12,fontsize=10]{scrartcl}
+\usepackage{lmodern}
 \usepackage{cabin} % provides Cabin
-\usepackage[scaled]{beramono} % provides Bera Mono
+%\usepackage[scaled]{beramono} % provides Bera Mono
 \usepackage[bitstream-charter]{mathdesign} % provides Charter BT
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -23,7 +24,7 @@
 
 %% Contents switches
 %\def\tpic{}
-%\def\tprog{}
+\def\tprog{}
 %\def\tsport{}
 
 
@@ -42,28 +43,22 @@
 \newcommand{\natlang}{
 \section{Languages}
 \begin{CVt}
-\item[English] fluent
-\item[German] fluent
-\item[Finnish] learning
-\item[Russian] good
-\item[Bulgarian] mother tongue
+\item[Fluent] English, German, Bulgarian
+\item[Conversational] Russian
+\item[Basic] Finnish
 \end{CVt}
 }
 
 % Computer languages
 % ------------------
 \newcommand{\complang}{
-\section{Programming Languages}
+\section{Programming}
 \begin{CVt}
-
-\item[C, C++] proficient (3+ years professional experience, 10+ years personal use)
-
-\item[R, Python, SQL] proficient (4+ years experience in academic environment)
-
-\item[Prolog, Erlang] proficient (3+ years personal use)
-
-\item[Java] working knowledge
-
+\item[C, C++] proficient (4+ years professional experience, 10+ years personal use)
+\item[R, Python, SQL] proficient (5+ years experience in academic environment)
+\item[Prolog] proficient (5+ years personal use)
+\item[HTML, CSS, XML] working knowledge
+\item[Java, Perl, Erlang] working knowledge
 \end{CVt}
 }
 
@@ -90,11 +85,9 @@ Member of the MTG (Mannheimer Turn- und Sport-Gesellschaft 1889 e.V.) Triathlon 
 % Personal information
 % --------------------
 \newcommand{\personalinformation}{
-\section{Personal Information}
+\section{Personal}
 \begin{CVt}
-\item[Born] 13.08.1981
-\item[Place of birth] Plovdiv, Bulgaria
-\item[Nationality] Bulgarian
+\item[Born] 13.08.1981 in Plovdiv, Bulgaria
 \item[Family status] Married with children
 \end{CVt}
 }
@@ -106,12 +99,12 @@ Member of the MTG (Mannheimer Turn- und Sport-Gesellschaft 1889 e.V.) Triathlon 
 \begin{CV}
 
 \item[10.2006--9.2008]
-Molecular Bioengineering (Master of Science M.Sc.), GPA 1.9
+Molecular Bioengineering (Master of Science M.Sc.) %, GPA 1.9
 
 TU Dresden, Dresden University of Technology, Germany
 
 \item[2.2002--9.2006]
-Computer Science (Diplom FH), GPA 1.9
+Computer Science (Diplom FH) %, GPA 1.9
 
 Hochschule Mannheim, University of Applied Sciences, Germany
 
@@ -123,7 +116,7 @@ Hochschule Mannheim, University of Applied Sciences
 \fi
 
 \item[9.1994--5.1999]
-High School Diploma, GPA 1.5
+High School Diploma %, GPA 1.5
 
 American College of Sofia, an English language high school, Bulgaria
 
@@ -131,13 +124,13 @@ American College of Sofia, an English language high school, Bulgaria
 Profiles of Study: English, Mathematics, Advanced Physics
 \fi
 
-%\if 0
+\if 0
 \begin{small}
 \item[Grading key]
 \mbox{1.0-1.5 good;} \mbox{1.6-2.5 satisfactory;} \mbox{2.6-3.5 average;}
 \mbox{3.6-4.0 pass;} \mbox{4.1-5.0 fail}
 \end{small}
-%\fi
+\fi
 
 \end{CV}
 }
@@ -149,7 +142,7 @@ Profiles of Study: English, Mathematics, Advanced Physics
 \begin{CV}
 
 \item[Mentoring]
-Mentor for ``Expert Systems in SWI-Prolog'' at ``Facebook Open Academy'', University of California San Diego, Spring 2015
+Mentor at ``Expert Systems in SWI-Prolog'' for the ``Facebook Open Academy'' at the University of California San Diego, Spring 2015
 
 \item[Scientific talk]
 ``The role of cholesterol-binding protein StARD3 in ErbB2-positive Breast Cancer'', Boris Vassilev
@@ -217,7 +210,7 @@ Assessment of algorithms for the detection of activated pathways in regulatory n
 Systems Biology and Cellular Networks group (Dr.~Andreas Beyer), BIOTEC, Dresden University of Technology
 
 \ifdefined\tprog
-Programming languages: R, C++
+Tools: Languages: R, C++; Platform: Unix
 \fi
 
 \item[2.2006--9.2006]
@@ -226,7 +219,7 @@ Design and implementation of a user interface based on a safety-related, redunda
 Department for Research and Development, HIMA Paul Hildebrandt
 
 \ifdefined\tprog
-    Programming language: C++; Platform: embedded redundant microcontroller architecture (Atmel, ARM core)
+Tools: Language: C++; Platform: embedded redundant microcontroller architecture (Atmel, ARM core)
 \fi
 
 \end{CV}
@@ -238,6 +231,13 @@ Department for Research and Development, HIMA Paul Hildebrandt
 \section{Work Experience}
 \begin{CV}
 
+\item[2.2015--4.2015]
+    Mentoring ``Expert Systems in SWI-Prolog: Web-based Course Scheduler'' for ``Facebook Open Academy'' (Spring 2015) at the University of California San Diego
+
+\ifdefined\tprog
+Design of the public and internal API, database design, project management
+\fi
+
 \item[Since 1.2009]
 PhD student, Intracellular Cholesterol Trafficking lab (Prof.~Elina Ikonen), Biomedicum, University of Helsinki, Finland
 
@@ -246,10 +246,8 @@ The role of endosomal trafficking defects in the progression of breast cancer
 \item[3.2007--10.2007]
 Internship, Bioinformatics Department (Prof.~Michael Schroeder), BIOTEC, Dresden University of Technology, Germany
 
-``Structural fragment clustering reveals novel structural and functional motifs in alpha-helical transmembrane proteins.'' A Marsico, A Henschel, C Winter, A Tuukkanen, \emph{B Vassilev}, K Scheubert and M Schroeder, \textsl{BMC Bioinformatics} 2010, 11:204
-
 \ifdefined\tprog
-Programming language: Python with BioMart and NumPy; MySQL database
+Tools: Python with BioMart and NumPy; MySQL database
 \fi
 
 \item[3.2003--1.2006]
@@ -258,11 +256,11 @@ Internship and software engineer / programmer, Department for Research and Devel
 \ifdefined\tprog
 A. Implementing the software for the H6210 HART-Multiplexer%
     \\
-    Programming language: C; Platform: embedded microcontroller (MSP430)
+    Tools: Language: C; Platform: embedded microcontroller (MSP430)
 
 B. Development of a device type manager for the H6210 HART multiplexer according to the Field Device Tool specification%
     \\
-    Programming language: C++; Platform: Windows, Microsoft Component Object Model (COM) with ActiveX Template Library
+    Tools: Language: C++; Platform: Windows, Microsoft Component Object Model (COM) with ActiveX Template Library
 \fi
 
 \end{CV}
@@ -306,18 +304,8 @@ Performed a self-composed song inspired by my PhD project
 \fi
 
 \begin{sffamily}
-\LARGE{Curriculum Vitae}
-\vspace{.5\baselineskip}
-
+\LARGE{Curriculum Vitae}\par\medskip
 \Large{\textbf{Boris Vassilev}}
-\vspace{.15\baselineskip}
-
-\normalsize{
-Pihlajatie 39 As 1\\
-00270 Helsinki, Finland\\
-phone: +358\,45\,237\,4737\\
-e-mail: boris.vassilev@helsinki.fi\\
-}
 \end{sffamily}
 
 \ifdefined\tpic
@@ -328,15 +316,29 @@ e-mail: boris.vassilev@helsinki.fi\\
 
 
 \begin{flushleft}
-    \personalinformation{}
-    \education{}
-    \workexperience{}
-    \theses{}
-    \grants{}
-    \scientificactivities{}
-    \otheractivities{}
-    \natlang{}
-    \complang{}
+\section{Contact}
+\begin{CVt}
+\item[Address] Pihlajatie 39 As 1, 00270 Helsinki, Finland
+\item[Phone] +358\,45\,237\,4737
+\item[E-mail] \url{boris.vassilev@gmail.com}
+\ifdefined\tprog
+\item[GitHub] \url{https://github.com/borisvassilev}
+\item[Stack Overflow] \url{http://stackoverflow.com/users/1812457/boris}
+\fi
+\end{CVt}
+
+\personalinformation{}
+\natlang{}
+\complang{}
+\workexperience{}
+
+\clearpage
+
+\education{}
+\theses{}
+%\grants{}
+%\scientificactivities{}
+\otheractivities{}
 \end{flushleft}
 
 \end{document}
