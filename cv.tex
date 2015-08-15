@@ -1,8 +1,9 @@
 \documentclass[DIV=12,fontsize=10]{scrartcl}
-\usepackage{lmodern}
+%\usepackage{lmodern}
 \usepackage{cabin} % provides Cabin
 %\usepackage[scaled]{beramono} % provides Bera Mono
 \usepackage[bitstream-charter]{mathdesign} % provides Charter BT
+\renewcommand*\ttdefault{lmvtt} % a proportional "typewriter" font
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 
@@ -16,7 +17,6 @@
 \title{Curriculum Vitae}
 \author{Boris Vassilev}
 
-\usepackage{tabularx}
 \usepackage{CV}
 
 \usepackage[super]{nth}
@@ -38,8 +38,9 @@
 \addtolength{\voffset}{-20pt}
 
 \hyphenation{ Mic-ro-cont-rol-ler mic-ro-cont-rol-ler De-ve-lop-ment}
+
 % Languages
-% ---------------
+% ---------
 \newcommand{\natlang}{
 \section{Languages}
 \begin{CVt}
@@ -186,7 +187,7 @@ Assessment of algorithms for the detection of activated pathways in regulatory n
 Systems Biology and Cellular Networks group (Dr.~Andreas Beyer), BIOTEC, Dresden University of Technology
 
 \ifdefined\tprog
-Languages: R, C++; Platform: Unix
+Languages: R, C++; Platform: GNU/Linux
 \fi
 
 \item[2.2006--9.2006]
@@ -230,12 +231,10 @@ Tools: Python with BioMart and NumPy; MySQL database
 Internship and software engineer / programmer, Department for Research and Development, HIMA Paul Hildebrandt, Brühl (Baden), Germany
 
 \ifdefined\tprog
-A. Implementing the software for the H6210 HART-Multiplexer%
-    \\
+A. Implementing the software for the H6210 HART-Multiplexer\\
     Language: C; Platform: embedded microcontroller (MSP430)
 
-B. Development of a device type manager for the H6210 HART multiplexer according to the Field Device Tool specification%
-    \\
+B. Development of a device type manager for the H6210 HART multiplexer according to the Field Device Tool specification\\
     Language: C++; Platform: Windows, Microsoft Component Object Model (COM) with ActiveX Template Library
 \fi
 
@@ -307,8 +306,8 @@ Performed a self-composed song inspired by my PhD project
 \fi
 
 \begin{sffamily}
-\LARGE{Curriculum Vitae}\par\medskip
-\Large{\textbf{Boris Vassilev}}\par\medskip
+\huge{Curriculum Vitae}\par\medskip
+\LARGE{\textbf{Boris Vassilev}}\par\medskip
 \normalsize{
 Pihlajatie 39 As 1, 00270 Helsinki, Finland\\
 \href{tel:+358452374737}{+358\,(0)\,45\,237\,4737}
@@ -331,13 +330,10 @@ Pihlajatie 39 As 1, 00270 Helsinki, Finland\\
 \complang{}
 \workexperience{}
 \education{}
-
 \clearpage
 
 \theses{}
 \publications{}
-%\grants{}
-%\scientificactivities{}
 \otheractivities{}
 \end{flushleft}
 
