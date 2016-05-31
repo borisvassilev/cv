@@ -1,8 +1,11 @@
 \documentclass[DIV=12,fontsize=10]{scrartcl}
-%\usepackage{lmodern}
-\usepackage{cabin} % provides Cabin
-%\usepackage[scaled]{beramono} % provides Bera Mono
-\usepackage[bitstream-charter]{mathdesign} % provides Charter BT
+
+\usepackage{cabin}
+\usepackage[lf]{Baskervaldx} % lining figures
+\usepackage[bigdelims,vvarbb]{newtxmath} % math italic letters from Nimbus Roman
+\usepackage[cal=boondoxo]{mathalfa} % mathcal from STIX, unslanted a bit
+\renewcommand*\oldstylenums[1]{\textosf{#1}}
+
 \renewcommand*\ttdefault{lmvtt} % a proportional "typewriter" font
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
