@@ -1,10 +1,10 @@
 \documentclass[DIV=12,fontsize=10]{scrartcl}
-
+\usepackage[bitstream-charter]{mathdesign}
 \usepackage{cabin}
-\usepackage[lf]{Baskervaldx} % lining figures
-\usepackage[bigdelims,vvarbb]{newtxmath} % math italic letters from Nimbus Roman
-\usepackage[cal=boondoxo]{mathalfa} % mathcal from STIX, unslanted a bit
-\renewcommand*\oldstylenums[1]{\textosf{#1}}
+%\usepackage[lf]{Baskervaldx} % lining figures
+%\usepackage[bigdelims,vvarbb]{newtxmath} % math italic letters from Nimbus Roman
+%\usepackage[cal=boondoxo]{mathalfa} % mathcal from STIX, unslanted a bit
+%\renewcommand*\oldstylenums[1]{\textosf{#1}}
 
 \renewcommand*\ttdefault{lmvtt} % a proportional "typewriter" font
 \usepackage[T1]{fontenc}
@@ -48,8 +48,7 @@
 \section{Languages}
 \begin{CVt}
 \item[Fluent] English, German, Bulgarian (mother tongue)
-\item[Conversational] Russian
-\item[Basic] Finnish (still learning)
+\item[Conversational] Finnish, Russian
 \end{CVt}
 }
 
@@ -58,8 +57,8 @@
 \newcommand{\complang}{
 \section{Programming}
 \begin{CVt}
-\item[Languages] C, C++, R, Python, SQL, Prolog, Bash, sed, Awk; comfortable with Java, Perl, Erlang
-\item[Platforms] GNU/Linux, Embedded microcontrollers
+\item[Languages] Prolog, C, C++, R, Python, SQL, Bash, sed, Awk; comfortable with Java, Perl, Erlang
+\item[Platforms] GNU/Linux, Embedded microcontrollers, Windows
 \item[Web] HTML, CSS, XML, JSON; HTTP
 \item[Online presence] GitHub -- \href{https://github.com/borisvassilev}{\texttt{borisvassilev}}; Stack Overflow -- \href{http://stackoverflow.com/users/1812457/boris}{\texttt{1812457/Boris}}
 \end{CVt}
@@ -184,6 +183,17 @@ Sixth International HBGS Student Council Symposium: Cell Cycle and Proliferation
 \section{Theses}
 \begin{CV}
 
+\item[1.2009--11.2016]
+The role of endocytic trafficking defects in the progression of breast cancer (doctoral thesis, supervisor Prof.~Elina Ikonen)
+
+Intracellular Cholesterol Trafficking lab, Department of Anatomy, Faculty of Medicine, University of Helsinki
+
+Experimental cell biology and molecular biology
+
+\ifdefined\tprog
+Languages: Prolog, R, SQL, Bash; Platform: GNU/Linux
+\fi
+
 \item[3.2008--8.2008]
 Assessment of algorithms for the detection of activated pathways in regulatory networks (master thesis, supervisor Dr.~Andreas Beyer)
 
@@ -246,33 +256,35 @@ B. Development of a device type manager for the H6210 HART multiplexer according
 
 \newcommand{\publications}{
 \section{Publications}
-\begin{CV}
 
-\item[In preparation]
-\textbf{Boris Vassilev}, Louhimo R, Ikonen E, Hautaniemi S.
+\textbf{Boris Vassilev}, Louhimo R, Ikonen E, Hautaniemi S
 
-``Language-agnostic reproducible data analysis using literate programming'',
-manuscript in preparation to be submitted to \textit{PLOS One}.
+``Language-agnostic reproducible data analysis using literate programming''
 
-\item[4.2015]
-\textbf{Boris Vassilev}, Sihto H, Li S, Hölltä-Vuori M, Ilola J, Lundin J, Isola J, Kellokumpu-Lehtinen PL, Joensuu H, Ikonen E.
+under revision for \textit{PLOS ONE}
+\medskip
 
-``Elevated levels of StAR-related lipid transfer protein 3 alter cholesterol balance and adhesiveness of breast cancer cells: potential mechanisms contributing to progression of HER2-positive breast cancers'',
+\textbf{Boris Vassilev}, Sihto H, Li S, Hölltä-Vuori M, Ilola J, Lundin J, Isola J, Kellokumpu-Lehtinen PL, Joensuu H, Ikonen E
+
+``Elevated levels of StAR-related lipid transfer protein 3 alter cholesterol balance and adhesiveness of breast cancer cells: potential mechanisms contributing to progression of HER2-positive breast cancers''
+
 \textit{American Journal of Pathology} 2015 Apr;185(4):987-1000.
+\medskip
 
-\item[9.2013]
-Vilja Pietiäinen, \textbf{Vassilev B}, Blom T, Wang W, Nelson J, Bittman R, Bäck N, Zelcer N, Ikonen E.
+Vilja Pietiäinen, \textbf{Vassilev B}, Blom T, Wang W, Nelson J, Bittman R, Bäck N, Zelcer N, Ikonen E
 
-``NDRG1 functions in LDL receptor trafficking by regulating endosomal recycling and degradation'',
+``NDRG1 functions in LDL receptor trafficking by regulating endosomal recycling and degradation''
+
 \textit{Journal of Cell Science} 2013 Sep~1;126(Pt 17):3961-71.
+\medskip
 
-\item[4.2010]
-Annalisa Marsico, Henschel A, Winter C, Tuukkanen A, \textbf{Vassilev B}, Scheubert K, Schroeder M.
+Annalisa Marsico, Henschel A, Winter C, Tuukkanen A, \textbf{Vassilev B}, Scheubert K, Schroeder M
 
-``Structural fragment clustering reveals novel structural and functional motifs in $\alpha$-helical transmembrane proteins'',
+``Structural fragment clustering reveals novel structural and functional motifs in $\alpha$-helical transmembrane proteins''
+
 \textit{BMC Bioinformatics} 2010, Apr~26;11:204.
+\medskip
 
-\end{CV}
 }
 % Other activities
 % ----------------
@@ -285,7 +297,12 @@ Annalisa Marsico, Henschel A, Winter C, Tuukkanen A, \textbf{Vassilev B}, Scheub
 
 Performed a self-composed song inspired by my PhD project
 
-\item[6.2010--12.2013] Member of the Helsinki Biomedical Graduate Program (HBGP) student council
+\item[6.2010--12.2013] Member of the Helsinki Biomedical Graduate Program (HBGP) student council; Member of the organizing committee:
+
+Seventh International HBGP Symposium: Immunity and Inflammation in Disease, June 7--8, 2012, Biomedicum Helsinki, Finland
+
+Sixth International HBGS Symposium: Cell Cycle and Proliferation, April 14--15, 2011, Biomedicum Helsinki, Finland
+
 
 \end{CV}
 }
@@ -335,13 +352,13 @@ Pihlajatie 39 As 1, 00270 Helsinki, Finland\\
 \personalinformation{}
 \natlang{}
 \complang{}
-\workexperience{}
 \education{}
+\workexperience{}
 \clearpage
 
 \theses{}
-\publications{}
 \otheractivities{}
+\publications{}
 \end{flushleft}
 
 \end{document}
