@@ -1,4 +1,4 @@
-\documentclass[DIV=12,fontsize=10]{scrartcl}
+\documentclass[DIV=11,fontsize=10]{scrartcl}
 \usepackage[bitstream-charter]{mathdesign}
 \usepackage{cabin}
 %\usepackage[lf]{Baskervaldx} % lining figures
@@ -26,7 +26,7 @@
 \usepackage{eurosym}
 
 %% Contents switches
-%\def\tpic{}
+\def\tpic{}
 \def\tprog{}
 %\def\tsport{}
 
@@ -55,11 +55,11 @@
 % Computer languages
 % ------------------
 \newcommand{\complang}{
-\section{Programming}
+\section{Programming skills}
 \begin{CVt}
 \item[Languages] C, C++, R, Python, SQL, Prolog, Bash, sed, Awk; comfortable with Java, Perl, Erlang
 \item[Platforms] GNU/Linux, Embedded microcontrollers, Windows
-\item[Web] HTML, CSS, XML, JSON; HTTP
+\item[Web] HTML, CSS, XML, JSON; HTTP; Full-stack development with SWI-Prolog
 \item[Online presence] GitHub -- \href{https://github.com/borisvassilev}{\texttt{borisvassilev}}; Stack Overflow -- \href{http://stackoverflow.com/users/1812457/boris}{\texttt{1812457/Boris}}
 \end{CVt}
 }
@@ -84,16 +84,6 @@ Member of the MTG (Mannheimer Turn- und Sport-Gesellschaft 1889 e.V.) Triathlon 
 \end{CV}
 }
 
-% Personal information
-% --------------------
-\newcommand{\personalinformation}{
-\section{Personal}
-\begin{CVt}
-\item[Born] 13.08.1981 in Plovdiv, Bulgaria; Nationality: Bulgarian
-\item[Family status] Married with children
-\end{CVt}
-}
-
 % Education
 % ---------
 \newcommand{\education}{
@@ -104,9 +94,25 @@ Member of the MTG (Mannheimer Turn- und Sport-Gesellschaft 1889 e.V.) Triathlon 
 Molecular Bioengineering (Master of Science M.Sc.)
 at the Dresden University of Technology, Germany
 
+\emph{Master Thesis}:
+``Assessment of algorithms for the detection of activated pathways in regulatory networks'',
+Systems Biology and Cellular Networks group (Dr.~Andreas Beyer), BIOTEC, Dresden University of Technology
+
+\ifdefined\tprog
+\emph{Programming}: R package in high-performance C++
+\fi
+
 \item[2.2002--9.2006]
 Computer Science (Diplom Informatiker FH)
 at the Mannheim University of Applied Sciences, Germany
+
+\emph{Diploma thesis}:
+``Design and implementation of a user interface based on a safety-related, redundant architecture'',
+Department for Research and Development (Prof.~Dr.-Ing.~habil.~Josef Börcsök), HIMA Paul Hildebrandt, Br\"uhl, Germany
+
+\ifdefined\tprog
+\emph{Programming}: C++ for an ARM Core Atmel embedded redundant microcontroller
+\fi
 
 \item[9.1994--5.1999]
 American College of Sofia, an English language high school, Bulgaria
@@ -126,7 +132,7 @@ Mentor at ``Expert Systems in SWI-Prolog'' for the ``Facebook Open Academy'' at 
 \item[Scientific talk]
 ``The role of cholesterol-binding protein StARD3 in ErbB2-positive Breast Cancer'', Boris Vassilev
 
-The Fifth Finnish Cell Biology Symposium, April 19--20, 2012, Lammi, Finland
+The Fifth Finnish Cell Biology Symposium, April~19--20, 2012, Lammi, Finland
 
 \item[Poster]
 ``MLN64---a Link between Cell Cholesterol Transport and Breast Cancer?'' \emph{Boris Vassilev}, Maurice Jansen and Elina Ikonen
@@ -137,12 +143,12 @@ EMBO | EMBL Symposium: Structure and Dynamics of Protein Networks, October 13--1
 
 The Second Vesicular Traffic and Cancer Workshop, June 7--9, 2010, Turku, Finland
 
-The Third Finnish Cell Biology Symposium, April 22--23, 2010, Lammi, Finland
+The Third Finnish Cell Biology Symposium, April~22--23, 2010, Lammi, Finland
 
 \item[Organizer]
-Seventh International HBGP Student Council Symposium: Immunity and Inflammation in Disease, June 7--8, 2012, Biomedicum Helsinki, Finland
+Seventh International HBGP Student Council Symposium: Immunity and Inflammation in Disease, June~7--8, 2012, Biomedicum Helsinki, Finland
 
-Sixth International HBGS Student Council Symposium: Cell Cycle and Proliferation, April 14--15, 2011, Biomedicum Helsinki, Finland
+Sixth International HBGS Student Council Symposium: Cell Cycle and Proliferation, April~14--15, 2011, Biomedicum Helsinki, Finland
 
 \end{CV}
 }
@@ -177,132 +183,84 @@ Sixth International HBGS Student Council Symposium: Cell Cycle and Proliferation
 \end{CV}
 }
 
-% Theses
-% ------
-\newcommand{\theses}{
-\section{Theses}
-\begin{CV}
-
-\item[1.2009--11.2016]
-Studies on proteins influencing cancer progression and regulating endocytic lipid trafficking (doctoral thesis, supervisor Prof.~Elina Ikonen)
-
-Intracellular Cholesterol Trafficking lab, Department of Anatomy, Faculty of Medicine, University of Helsinki
-
-Experimental cell biology and molecular biology
-
-\ifdefined\tprog
-Languages: Prolog, R, SQL, Bash; Platform: GNU/Linux
-\fi
-
-\item[3.2008--8.2008]
-Assessment of algorithms for the detection of activated pathways in regulatory networks (master thesis, supervisor Dr.~Andreas Beyer)
-
-Systems Biology and Cellular Networks group (Dr.~Andreas Beyer), BIOTEC, Dresden University of Technology
-
-\ifdefined\tprog
-Languages: R, C++; Platform: GNU/Linux
-\fi
-
-\item[2.2006--9.2006]
-Design and implementation of a user interface based on a safety-related, redundant architecture (diploma thesis, supervisor Prof.~Dr.-Ing.~habil.~Josef Börcsök)
-
-Department for Research and Development, HIMA Paul Hildebrandt
-
-\ifdefined\tprog
-Language: C++; Platform: embedded redundant microcontroller architecture (Atmel, ARM core)
-\fi
-
-\end{CV}
-}
-
 % Work experience
 % ---------------
 \newcommand{\workexperience}{
 \section{Work Experience}
 \begin{CV}
 
+\item[Since 1.2009]
+Researcher, Intracellular Cholesterol Trafficking lab (Prof.~Elina Ikonen), Biomedicum, University of Helsinki, Finland
+
+Studies on proteins influencing cancer progression and regulating endocytic lipid trafficking (doctoral thesis, supervisor Prof.~Elina Ikonen)
+
+\emph{Experimental methods}: molecular cell biology
+
+\ifdefined\tprog
+\emph{Proramming}: Prolog, SQL, R, C++, Bash on GNU/Linux
+\fi
+
+\textbf{Boris Vassilev}, Louhimo R, Ikonen E, Hautaniemi S.
+``Language-agnostic reproducible data analysis using literate programming''
+\textit{PLoS ONE} 2016 Oct; 11(10): e0164023.
+
+\textbf{Boris Vassilev}, Sihto H, Li S, Hölltä-Vuori M, Ilola J, Lundin J, Isola J, Kellokumpu-Lehtinen PL, Joensuu H, Ikonen E.
+``Elevated levels of StAR-related lipid transfer protein 3 alter cholesterol balance and adhesiveness of breast cancer cells: potential mechanisms contributing to progression of HER2-positive breast cancers''
+\textit{American Journal of Pathology} 2015 Apr; 185(4): 987--1000.
+
+Vilja Pietiäinen, \textbf{Vassilev B}, Blom T, Wang W, Nelson J, Bittman R, Bäck N, Zelcer N, Ikonen E.
+``NDRG1 functions in LDL receptor trafficking by regulating endosomal recycling and degradation''
+\textit{Journal of Cell Science} 2013 Sep; 126(Pt 17): 3961--71.
+
 \item[2.2015--4.2015]
     Mentoring ``Expert Systems in SWI-Prolog: Web-based Course Scheduler'' for ``Facebook Open Academy'' (Spring 2015) at the University of California, San Diego
 
 \ifdefined\tprog
-Design of the public and internal APIs, database design, project leader
+\emph{Role}: Design of the public and internal APIs, database design, project leader
+
+\emph{Programming}: SWI-Prolog
 \fi
 
-\item[Since 1.2009]
-PhD student, Intracellular Cholesterol Trafficking lab (Prof.~Elina Ikonen), Biomedicum, University of Helsinki, Finland
-
-The role of endosomal trafficking defects in the progression of breast cancer
-
 \item[3.2007--10.2007]
-Part-time software developer, Bioinformatics Department (Prof.~Michael Schroeder), BIOTEC, Dresden University of Technology, Germany
+Software developer, Bioinformatics Department (Prof.~Michael Schroeder), BIOTEC, Dresden University of Technology, Germany
+
+Annalisa Marsico, Henschel A, Winter C, Tuukkanen A, \textbf{Vassilev B}, Scheubert K, Schroeder M
+``Structural fragment clustering reveals novel structural and functional motifs in $\alpha$-helical transmembrane proteins''
+\textit{BMC Bioinformatics} 2010 Apr; 11:204.
 
 \ifdefined\tprog
-Tools: Python with BioMart and NumPy, MySQL database
+\emph{Programming}: Python with BioMart and NumPy, MySQL database
 \fi
 
 \item[3.2003--1.2006]
-Internship and software engineer / programmer, Department for Research and Development, HIMA Paul Hildebrandt, Brühl (Baden), Germany
+Software architect and programmer, Department for Research and Development, HIMA Paul Hildebrandt, Brühl (Baden), Germany
 
 \ifdefined\tprog
-A. Implementing the software for the H6210 HART-Multiplexer\\
-    Language: Embedded C; Platform: embedded microcontroller (MSP430)
+A. Design and implementation of the  H6210 HART-Multiplexer firmware\\
+\emph{Programming}: Embedded C for the MSP430 embedded microcontroller
 
-B. Development of a device type manager for the H6210 HART multiplexer according to the Field Device Tool specification\\
-    Language: C++; Platform: Windows, Microsoft Component Object Model (COM) with ActiveX Template Library
+B. Device type manager for the H6210 HART multiplexer\\
+\emph{Programming}: C++ for COM (Microsoft Windows Component Object Model)
 \fi
 
 \end{CV}
 }
 
-\newcommand{\publications}{
-\section{Publications}
-
-\textbf{Boris Vassilev}, Louhimo R, Ikonen E, Hautaniemi S
-
-``Language-agnostic reproducible data analysis using literate programming''
-
-\textit{PLoS ONE} 2016 Oct; 11(10): e0164023.
-\medskip
-
-\textbf{Boris Vassilev}, Sihto H, Li S, Hölltä-Vuori M, Ilola J, Lundin J, Isola J, Kellokumpu-Lehtinen PL, Joensuu H, Ikonen E
-
-``Elevated levels of StAR-related lipid transfer protein 3 alter cholesterol balance and adhesiveness of breast cancer cells: potential mechanisms contributing to progression of HER2-positive breast cancers''
-
-\textit{American Journal of Pathology} 2015 Apr; 185(4): 987--1000.
-\medskip
-
-Vilja Pietiäinen, \textbf{Vassilev B}, Blom T, Wang W, Nelson J, Bittman R, Bäck N, Zelcer N, Ikonen E
-
-``NDRG1 functions in LDL receptor trafficking by regulating endosomal recycling and degradation''
-
-\textit{Journal of Cell Science} 2013 Sep; 126(Pt 17): 3961--71.
-\medskip
-
-Annalisa Marsico, Henschel A, Winter C, Tuukkanen A, \textbf{Vassilev B}, Scheubert K, Schroeder M
-
-``Structural fragment clustering reveals novel structural and functional motifs in $\alpha$-helical transmembrane proteins''
-
-\textit{BMC Bioinformatics} 2010 Apr; 11:204.
-\medskip
-
-}
 % Other activities
 % ----------------
 \newcommand{\otheractivities}{
 
-\section{Other}
+\section{Science-related activities}
 \begin{CV}
 
-\item[3.2011] Winner of the first ScienceSLAM event in Helsinki, Finland
-
+\item[3.2011] Winner of the first ScienceSLAM event in Helsinki, Finland:
 Performed a self-composed song inspired by my PhD project
 
-\item[6.2010--12.2013] Member of the Helsinki Biomedical Graduate Program (HBGP) student council; Member of the organizing committee:
+\item[6.2010--12.2013] Member of the Helsinki Biomedical Graduate Program (HBGP) student council
 
-Seventh International HBGP Symposium: Immunity and Inflammation in Disease, June 7--8, 2012, Biomedicum Helsinki, Finland
+\item[2.2012--6.2012] Organizer of the Seventh International HBGP Symposium: Immunity and Inflammation in Disease, June 7--8, 2012, Biomedicum Helsinki, Finland
 
-Sixth International HBGS Symposium: Cell Cycle and Proliferation, April 14--15, 2011, Biomedicum Helsinki, Finland
-
+\item[11.2010--4.2011] Organizer of the Sixth International HBGS Symposium: Cell Cycle and Proliferation, April~14--15, 2011, Biomedicum Helsinki, Finland
 
 \end{CV}
 }
@@ -313,13 +271,14 @@ Sixth International HBGS Symposium: Cell Cycle and Proliferation, April 14--15, 
     \setlength{\TPVertModule}{1pt}
 \fi
 
+\newcommand{\prof}[1]{$\langle$ \textit{#1} $\rangle$}
 
 \begin{document}
 \pagestyle{empty}
 
 \ifdefined\tpic
-    \begin{textblock}{100}(415,70)
-    \includegraphics[width=.95\columnwidth]{boris.jpg}
+    \begin{textblock}{100}(409,78)
+    \includegraphics[width=.97\columnwidth]{boris.jpg}
     \end{textblock}
 \fi
 
@@ -330,15 +289,22 @@ Sixth International HBGS Symposium: Cell Cycle and Proliferation, April 14--15, 
 \fi
 
 \begin{sffamily}
-\huge{Curriculum Vitae}\par\medskip
+\huge{Curriculum Vitae}\par
 \LARGE{\textbf{Boris Vassilev}}\par\medskip
+\end{sffamily}
 \normalsize{
 Pihlajatie 39 As 1, 00270 Helsinki, Finland\\
 \href{tel:+358452374737}{+358\,(0)\,45\,237\,4737}
 ---
 \href{boris.vassilev@gmail.com}{boris.vassilev@gmail.com}\\
+Born 1981.08.13 in Plovdiv, Bulgaria; married, with children\\
+\smallskip
+\prof{Computer scientist}
+\prof{Computational biologist}
+\prof{Proficient programmer}\\
+\prof{A dozen programming languages}
+\prof{Molecular cell biology experimentalist}
 }
-\end{sffamily}
 
 \ifdefined\tpic
     \end{flushleft}
@@ -349,16 +315,24 @@ Pihlajatie 39 As 1, 00270 Helsinki, Finland\\
 
 \begin{flushleft}
 
-\personalinformation{}
-\natlang{}
-\complang{}
+\smallskip
 \workexperience{}
-\education{}
 \clearpage
 
-\theses{}
+\complang{}
+\natlang{}
+\education{}
 \otheractivities{}
-\publications{}
+
+\section{References}
+Elina Ikonen:
+\href{tel:+358294125277}{+358\,(0)\,2941\,25277},
+\href{elina.ikonen@helsinki.fi}{elina.ikonen@helsinki.fi}
+
+Tomas Blom:
+\href{tel:+358294125267}{+358\,(0)\,2941\,25267},
+\href{tomas.blom@helsinki.fi}{tomas.blom@helsinki.fi}
+
 \end{flushleft}
 
 \end{document}
